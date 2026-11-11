@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Love ❤️</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:100%;height:100%;background:#170006;overflow:hidden}
+.page{display:none;position:relative;width:100%;height:100dvh;overflow:hidden}
+.page.active{display:block}
+.poster{width:100%;height:100%;object-fit:contain;display:block}
+.hotspot{position:absolute;display:block;background:transparent;border:0;cursor:pointer;z-index:99;-webkit-tap-highlight-color:transparent}
+
+/* Tap areas are approximate and can be adjusted after testing on your phone. */
+.next1{left:24%;top:83%;width:52%;height:9%}
+.next2{left:23%;top:67%;width:54%;height:10%}
+.next3{left:30%;top:82%;width:60%;height:9%}
+.next4{left:20%;top:79%;width:60%;height:11%}
+.next5{left:22%;top:67%;width:56%;height:11%}
+.next6{left:26%;top:79%;width:52%;height:10%}
+.next7{left:35%;top:85%;width:45%;height:10%}
+.replay{left:30%;top:88%;width:42%;height:9%}
+</style>
+</head>
+<body>
+
+<div class="page active" id="page1">
+  <img class="poster" src="https://i.ibb.co/m5cFcCvt/826a63e7-d243-8b28-dd0a-4ec1a4305852.jpg" alt="Page 1">
+  <button class="hotspot next1" onclick="goToPage(2)" aria-label="Just for You"></button>
+</div>
+
+<div class="page" id="page2">
+  <img class="poster" src="https://i.ibb.co/XrYKhF3T/33f2282e-46c1-7037-81e1-c72110d8454e.jpg" alt="Page 2">
+  <button class="hotspot next2" onclick="goToPage(3)" aria-label="Next"></button>
+</div>
+
+<div class="page" id="page3">
+  <img class="poster" src="https://i.ibb.co/C50gzqCH/949aca84-110e-0670-4e89-1bf5748bcad9.jpg" alt="Page 3">
+  <button class="hotspot next3" onclick="goToPage(4)" aria-label="Some of our precious memories"></button>
+</div>
+
+<div class="page" id="page4">
+  <img class="poster" src="https://i.ibb.co/QFKdfLFQ/BFD374-AF-C0-B6-4-FE0-AF21-AE3889-B62-D87.png" alt="Page 4">
+  <button class="hotspot next4" onclick="goToPage(5)" aria-label="Next"></button>
+</div>
+
+<div class="page" id="page5">
+  <img class="poster" src="https://i.ibb.co/rGPtcZXT/9-E1-C0-C61-EC09-4-B4-B-B774-4353070-F2508.png" alt="Page 5">
+  <button class="hotspot next5" onclick="goToPage(6)" aria-label="Continue"></button>
+</div>
+
+<div class="page" id="page6">
+  <img class="poster" src="https://i.ibb.co/pj5fTYMq/68a79cb9-a7b6-5869-8e77-976d171554af.jpg" alt="Page 6">
+  <button class="hotspot next6" onclick="goToPage(7)" aria-label="Read my letter"></button>
+</div>
+
+<div class="page" id="page7">
+  <img class="poster" src="https://i.ibb.co/MyF2TRhW/64c45859-dcaa-d119-b881-4660b343c4e4.jpg" alt="Page 7">
+  <button class="hotspot next7" onclick="goToPage(8)" aria-label="One last thing"></button>
+</div>
+
+<div class="page" id="page8">
+  <img class="poster" src="https://i.ibb.co/GvPWJWHw/c52bec31-e6b6-a2d4-c184-77e5354dbdbd.jpg" alt="Page 8">
+  <button class="hotspot replay" onclick="goToPage(1)" aria-label="Replay"></button>
+</div>
+
+<script>
+function goToPage(number){
+  document.querySelectorAll('.page').forEach(function(page){
+    page.classList.remove('active');
+  });
+  var nextPage=document.getElementById('page'+number);
+  if(nextPage) nextPage.classList.add('active');
+  window.scrollTo(0,0);
+}
+</script>
+</body>
+</html>
